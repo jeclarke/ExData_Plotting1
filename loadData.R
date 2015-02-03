@@ -4,7 +4,7 @@ loadData <- function(){
         print("using cache")
         return (sav)
     }
-    d <- read.csv("../household_power_consumption.txt", 
+    d <- read.csv("household_power_consumption.txt", 
                   sep = ";",na.strings=c("","?","NA"), stringsAsFactors=FALSE,
                   colClasses=c(rep("character",2),rep("numeric",7)))        
     d$Date <- as.Date(d$Date, "%d/%m/%Y")    
